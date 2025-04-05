@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 24 24">
+  <!-- Generator: Adobe Illustrator 29.0.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 192)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+      }
+
+      .st1 {
+        fill: #fff;
+        fill-rule: evenodd;
+      }
+
+      .st2 {
+        fill: #b11d2e;
+      }
+
+      .st3 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="st0" x="2.3" y="4.1" width="20" height="16"/>
+    </clipPath>
+  </defs>
+  <g class="st3">
+    <g id="jp">
+      <path id="Path_238" class="st1" d="M1.1,4.1h22.5v16H1.1V4.1Z"/>
+      <ellipse id="Ellipse_21" class="st2" cx="12.3" cy="12.1" rx="4.7" ry="5"/>
+    </g>
+  </g>
+</svg>
