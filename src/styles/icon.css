@@ -1,0 +1,125 @@
+
+
+[class*="icon-"]:not(.icon-currency, .icon-address, .icon-withdraw ,.icon-promoPlan)::before {
+    content: "";
+    
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-color: white;
+    mask-repeat: no-repeat;
+    mask-origin: margin-box;
+    mask-position: center;
+}
+
+.icon-star::before{
+    mask-image:url('../assets/icons/icon_star.svg');
+}
+.icon-new::before{
+    mask-image:url('../assets/icons/icon_new.svg');
+}
+.icon-add::before{
+    mask-image:url('../assets/icons/icon_add.svg');
+}
+.icon-arrow::before{
+    mask-image:url('../assets/icons/icon_arrow.svg');
+}
+.icon-good:before{
+    mask-image:url('../assets/icons/icon_good.svg');
+}
+
+.icon-game:before {
+    mask-image:url('../assets/icons/icon_game.svg');
+}
+.icon-18:before {
+    mask-image:url('../assets/icons/icon_18.svg');
+}
+
+.icon-menu:before {
+    mask-image:url('../assets/icons/Menu_Menu.svg');
+}
+.icon-home:before {
+    mask-image:url('../assets/icons/Menu_Home.svg');
+}
+.icon-promo::before {
+    mask-image:url('../assets/icons/Menu_Promo.svg');
+}
+.icon-wallet::before {
+    mask-image:url('../assets/icons/Menu_Wallet.svg');
+}
+.icon-profile::before {
+    mask-image:url('../assets/icons/Menu_Profile.svg');
+}
+.icon-slot::before {
+    mask-image:url('../assets/icons/Item_Slot.svg');
+}
+.icon-live-casino::before {
+    mask-image:url('../assets/icons/Item_LiveCasino.svg');
+}
+.icon-poker::before{
+    mask-image:url('../assets/icons/Item_Poker.svg');
+}
+.icon-fishing::before {
+    mask-image:url('../assets/icons/Item_Fishing.svg');
+}   
+.icon-sport::before {
+    mask-image:url('../assets/icons/Item_Sport.svg');
+}
+.icon-lottery::before {
+    mask-image:url('../assets/icons/Item_Lottery.svg');
+}
+.icon-vip::before {
+    mask-image:url('../assets/icons/Item_VIP.svg');
+}
+.icon-affiliate::before {
+    mask-image:url('../assets/icons/Item_Affiliate.svg');
+}
+.icon-bonus::before {
+    mask-image:url('../assets/icons/Item_Bonus.svg');
+}
+.icon-search::before {
+    mask-image:url('../assets/icons/icon_search.svg');
+}
+.icon-withdraw::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image:url('../assets/icons/icon_Withdraw.svg');
+}
+.icon-address::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image:url('../assets/icons/icon_address.svg');
+}
+.icon-network::before {
+  
+    mask-image:url('../assets/icons/icon_Network4USDT.svg');
+}
+.icon-deposit::before {
+    mask-image:url('../assets/icons/icon_deposit.svg');
+}
+.icon-currency::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image:url('../assets/icons/icon_Currency.svg');
+}
+.icon-promoPlan::before {
+    content: '';
+    width: 24px;
+    height: 24px;
+    display: block;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-image:url('../assets/icons/icon_promoPlan.svg');
+}

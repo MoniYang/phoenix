@@ -1,5 +1,7 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+
+import colors from 'tailwindcss/colors';
+export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
@@ -7,20 +9,9 @@ module.exports = {
         theme: {
           red: 'var(--theme-red)',
           darkRed: 'var(--theme-dark-red)',
-          darkRed2: 'var(--theme-dark-red2)',
-          darkRed3: 'var(--theme-dark-red3)',
         },
-        highlight: {
-          green: 'var(--highlight-green)',
-          blue: 'var(--highlight-blue)',
-          yellow: 'var(--highlight-yellow)',
-        },
-        grey: 'var(--grey)',
-        brown: 'var(--brown)',
-        darkGrey: 'var(--dark-grey)',
-        infoBoard: 'var(--info-board)',
-
-        blackOpacity: {
+        black: {
+          DEFAULT: colors.black,
           1: 'var(--black-opacity-1)',
           2: 'var(--black-opacity-2)',
           3: 'var(--black-opacity-3)',
@@ -28,7 +19,8 @@ module.exports = {
           5: 'var(--black-opacity-5)',
           6: 'var(--black-opacity-6)',
         },
-        whiteOpacity: {
+        white: {
+          DEFAULT: colors.white,
           1: 'var(--white-opacity-1)',
           2: 'var(--white-opacity-2)',
           3: 'var(--white-opacity-3)',
