@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-const Text = ({ children }: { children: React.ReactNode }) => {
+const Text = ({ children , className}: { children: React.ReactNode , className?: string }) => {
   return (
-    <span>
+    <span className={className}>
       {children}
     </span>
   );
