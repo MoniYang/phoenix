@@ -30,3 +30,14 @@
   --white-opacity-5                  : hsla( 0, 0%, 100%, .16 );
   --white-opacity-6                  : hsla( 0, 0%, 100%, .08 );
 }
+
+body {
+  background-color: black;
+}
+
+.side-menu[data-open="true"] {
+  @apply transition duration-300 translate-x-0 ease-out;
+}
+.side-menu[data-open="false"] {
+  @apply transition duration-300 -translate-x-full ease-out;
+}

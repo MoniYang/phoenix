@@ -13,7 +13,6 @@ export const BalanceInfo = ({balance}: BalanceInfoProps) => {
           <Text>Balance:</Text>
           <Text>{balance}</Text>
         </div>
-
         <Button bg="red" fontSize="sm">
           <Text>Deposit</Text>
         </Button>

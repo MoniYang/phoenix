@@ -9,6 +9,8 @@ export default {
         theme: {
           red: 'var(--theme-red)',
           darkRed: 'var(--theme-dark-red)',
+          darkRed2: 'var(--theme-dark-red2)',
+          darkRed3: 'var(--theme-dark-red3)',
         },
         black: {
           DEFAULT: colors.black,

@@ -40,6 +40,7 @@ type ButtonProps = {
     border?: "none" | "black" | "red";
     fontSize?: "sm" | "base" | "lg";
     children?: ReactNode; 
+    onClick?: () => void;
   };
 
   const Button = ({
@@ -49,13 +50,14 @@ type ButtonProps = {
   bg,
   border,
   fontSize,
+  onClick,
   children,
   ...props
 }: ButtonProps) => {
   return (
     <button
       className={cn(button({ bg, border, fontSize }), className)}
-      data-selected={selected ? selected : undefined}
+      onClick={onClick}
       {...props}
     >
       {children}

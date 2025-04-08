@@ -2,12 +2,18 @@ export const sideMenuItems = [
     {
       title: 'GAMES',
       items: [
+        { icon: 'good', text: 'Popular' },
+        { icon: 'new', text: 'New games' },
+        { icon: '', text: 'Recently played' },
+        { icon: 'star', text: 'HOT games' },
         { icon: 'slot', text: 'Slot' },
-        { icon: 'live-casino', text: 'Live Casino' },
+        { icon: '', text: 'Baccarat' },
         { icon: 'poker', text: 'Poker' },
-        { icon: 'fishing', text: 'Fishing' },
-        { icon: 'lottery', text: 'Lottery' },
+        { icon: 'live-casino', text: 'Live Casino' },
         { icon: 'sport', text: 'Sport' },
+        { icon: 'lottery', text: 'Lottery' },
+        { icon: 'game', text: 'Select by Provider' },
+        { icon: '', text: 'Jackpot' }
       ],
     },
     {

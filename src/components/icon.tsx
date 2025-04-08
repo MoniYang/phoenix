@@ -6,7 +6,7 @@ const icon = tv({
   base: "",
   variants: {
    
-    themeColor: {
+    iconColor: {
       red: "before:!bg-theme-red",
      
     },
@@ -26,17 +26,16 @@ const icon = tv({
 type IconProps = VariantProps<typeof icon> & {
   name: string;
   className?: string;
-  rotate?: number;
+  size:  'xs'| 'sm'| 'md'| 'lg';
+  iconColor?: string;
+
 };
 
-export const Icon = ({ name, rotate, themeColor, size, className }: IconProps) => {
+export const Icon = ({ name, className , iconColor, size}: IconProps) => {
   return (
     <i
-      className={cn(
-        `icon-${name}`,
-        icon({  themeColor, size }),
-        rotate && `transform rotate-${rotate}`,
-        className
+      className={cn( icon({size, iconColor}),
+        `icon-${name}`, className
       )}
     />
   );
