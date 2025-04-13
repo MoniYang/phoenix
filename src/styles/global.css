@@ -12,6 +12,7 @@
   --highlight-green: #03FF00;
   --highlight-blue:#71c7d4;
   --highlight-yellow: #FFFF00;
+  --highlight-purple:#FB82FF;
 
   --dark-grey: #171b24;
   --info-board: #24232b;
@@ -29,10 +30,18 @@
   --white-opacity-4                  : hsla( 0, 0%, 100%, .32 );
   --white-opacity-5                  : hsla( 0, 0%, 100%, .16 );
   --white-opacity-6                  : hsla( 0, 0%, 100%, .08 );
+
+  --swiper-pagination-bullet-width: .75rem;
+  --swiper-pagination-bullet-height: .75rem;
+  --swiper-pagination-bullet-inactive-color : white;
 }
 
 body {
   background-color: black;
+  overflow-x: hidden;
+}
+main {
+  overflow-x: hidden;
 }
 
 .side-menu[data-open="true"] {
@@ -40,4 +49,49 @@ body {
 }
 .side-menu[data-open="false"] {
   @apply transition duration-300 -translate-x-full ease-out;
+}
+
+.swiper-chuck-prev,
+.swiper-chuck-next {
+  @apply text-white bg-theme-red rounded-full w-10 h-10 flex items-center justify-center absolute  z-[1] ;
+}
+
+
+.swiper-chuck-prev{
+  @apply -left-9;
+}
+
+.swiper-chuck-next {
+  @apply -right-9;
+}
+
+.swiper-chuck-prev i{
+  @apply left-1.5 relative;
+}
+
+.swiper-chuck-next i {
+  @apply right-1.5 relative;
+}
+
+.swiper.swiper-chuck {
+  @apply static flex items-center;
+}
+
+
+.swiper-pagination-bullet {
+  @apply !bg-white-3;
+}
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  @apply !bg-white;
+}
+
+.swiper.banner-swiper {
+  padding-bottom: 2.5rem;
+}
+.swiper-chuck-2 ~ .swiper-chuck-next{
+  @apply -right-12; 
+}
+
+.swiper-chuck-2 ~ .swiper-chuck-prev{
+  @apply -left-12
 }
