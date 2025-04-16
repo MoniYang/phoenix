@@ -57,17 +57,19 @@ const chunkArray = (arr: string[], size: number) => {
 	return result;
 };
 
-type PromoSwiperChuckProps = Omit<PromoSwiperProps, "swiperTriggerClass">;
-const PromoSwiperChuck: React.FC<PromoSwiperChuckProps> = ({ items }) => {
+const PromoSwiperChuck: React.FC<PromoSwiperProps> = ({
+	items,
+	swiperTriggerClass,
+}) => {
 	const groupedItems = chunkArray(items, 10); // 每組 10 張
 
 	return (
 		<div className="min-w-0 relative">
 			<Swiper
-				className="swiper-chuck"
+				className={`swiper-chuck-${swiperTriggerClass}`}
 				navigation={{
-					nextEl: ".swiper-chuck-next",
-					prevEl: ".swiper-chuck-prev",
+					nextEl: `.swiper-chuck-next--${swiperTriggerClass}`,
+					prevEl: `.swiper-chuck-prev--${swiperTriggerClass}`,
 				}}
 				modules={[Navigation]}
 				loop={true}
@@ -106,26 +108,39 @@ const PromoSwiperChuck: React.FC<PromoSwiperChuckProps> = ({ items }) => {
 					);
 				})}
 			</Swiper>
-			<div className="swiper-chuck-prev absolute left-2 top-1/2 -translate-y-1/2 z-20 cursor-pointer">
+			<div
+				className={cn(
+					`swiper-chuck-prev--${swiperTriggerClass}`,
+					" absolute left-2 top-1/2 -translate-y-1/2 z-20 cursor-pointer",
+				)}
+			>
 				<Icon name="arrow" size="lg" className="rotate-180 text-theme-red" />
 			</div>
-			<div className="swiper-chuck-next absolute right-2 top-1/2 -translate-y-1/2 z-20 cursor-pointer">
+			<div
+				className={cn(
+					`swiper-chuck-next--${swiperTriggerClass}`,
+					"absolute right-2 top-1/2 -translate-y-1/2 z-20 cursor-pointer",
+				)}
+			>
 				<Icon name="arrow" size="lg" className="rotate-0 text-theme-red" />
 			</div>
 		</div>
 	);
 };
 
-const PromoSwiperChuck2: React.FC<PromoSwiperChuckProps> = ({ items }) => {
+const PromoSwiperChuck2: React.FC<PromoSwiperProps> = ({
+	items,
+	swiperTriggerClass,
+}) => {
 	const groupedItems = chunkArray(items, 4); // 每組 10 張
 
 	return (
 		<div className="min-w-0 relative mx-8">
 			<Swiper
-				className="swiper-chuck-2"
+				className={`swiper-chuck2 swiper-chuck-${swiperTriggerClass}`}
 				navigation={{
-					nextEl: ".swiper-chuck-next",
-					prevEl: ".swiper-chuck-prev",
+					nextEl: `.swiper-chuck-next--${swiperTriggerClass}`,
+					prevEl: `.swiper-chuck-prev--${swiperTriggerClass}`,
 				}}
 				modules={[Navigation]}
 				loop={true}
@@ -150,10 +165,20 @@ const PromoSwiperChuck2: React.FC<PromoSwiperChuckProps> = ({ items }) => {
 					);
 				})}
 			</Swiper>
-			<div className="swiper-chuck-prev absolute left-2 top-1/2 -translate-y-1/2 z-20 cursor-pointer">
+			<div
+				className={cn(
+					`swiper-chuck-prev--${swiperTriggerClass}`,
+					" absolute left-2 top-1/2 -translate-y-1/2 z-20 cursor-pointer",
+				)}
+			>
 				<Icon name="arrow" size="lg" className="rotate-180 text-theme-red" />
 			</div>
-			<div className="swiper-chuck-next absolute right-2 top-1/2 -translate-y-1/2 z-20 cursor-pointer">
+			<div
+				className={cn(
+					`swiper-chuck-next--${swiperTriggerClass}`,
+					"absolute right-2 top-1/2 -translate-y-1/2 z-20 cursor-pointer",
+				)}
+			>
 				<Icon name="arrow" size="lg" className="rotate-0 text-theme-red" />
 			</div>
 		</div>

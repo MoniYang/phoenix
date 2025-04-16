@@ -39,6 +39,7 @@
 body {
   background-color: black;
   overflow-x: hidden;
+  font-size:.875rem;
 }
 main {
   overflow-x: hidden;
@@ -51,26 +52,33 @@ main {
   @apply transition duration-300 -translate-x-full ease-out;
 }
 
-.swiper-chuck-prev,
-.swiper-chuck-next {
+[class^="swiper-chuck-"] {
   @apply text-white bg-theme-red rounded-full w-10 h-10 flex items-center justify-center absolute  z-[1] ;
 }
 
 
-.swiper-chuck-prev{
+[class*=swiper-chuck-prev--]{
   @apply -left-9;
 }
 
-.swiper-chuck-next {
+[class*=swiper-chuck-next--] {
   @apply -right-9;
 }
 
-.swiper-chuck-prev i{
+[class*=swiper-chuck-prev--] i{
   @apply left-1.5 relative;
 }
 
-.swiper-chuck-next i {
+[class*=swiper-chuck-next--] i {
   @apply right-1.5 relative;
+}
+
+.swiper-chuck2 + [class*=swiper-chuck-prev--]{
+  @apply -left-12 ;
+}
+
+.swiper-chuck2 ~ [class*=swiper-chuck-next--] {
+  @apply -right-12;
 }
 
 .swiper.swiper-chuck {

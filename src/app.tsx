@@ -1,10 +1,20 @@
 import { useState } from "react";
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import {
+	Navigate,
+	Route,
+	BrowserRouter as Router,
+	Routes,
+} from "react-router-dom";
 import { Footer } from "./components/layouts/footer";
 import { Header } from "./components/layouts/header";
-import Home from "./components/layouts/home";
 import { SideMenu } from "./components/layouts/side-menu";
-import PopularGames from "./components/page/popular"; // 根據你實際放的位置修改
+import {
+	HotGames,
+	NewGames,
+	PopularGames,
+	RecentlyPlayed,
+} from "./components/page/games"; // 根據你實際放的位置修改
+import Home from "./components/page/home";
 
 export default function App() {
 	const [isSideMenuOpen, setIsSideMenuOpen] = useState(false);
@@ -16,13 +26,17 @@ export default function App() {
 	return (
 		<>
 			<Header />
-			<Home />
 
 			<SideMenu isOpen={isSideMenuOpen} setIsOpen={setIsSideMenuOpen} />
 			<Footer onMenuClick={toggleSideMenu} />
 
 			<Routes>
+				<Route path="/" element={<Navigate to="/home" />} />
+				<Route path="/home" element={<Home />} />
 				<Route path="/popular" element={<PopularGames />} />
+				<Route path="/new-games" element={<NewGames />} />
+				<Route path="/recently-played" element={<RecentlyPlayed />} />
+				<Route path="/hot-games" element={<HotGames />} />
 				{/* 其他路由 */}
 			</Routes>
 		</>

@@ -1,4 +1,4 @@
-import PopularGames from "../components/page/popular";
+import PopularGames from "../components/page/games";
 
 const routes = [
 	{

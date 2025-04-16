@@ -1,4 +1,5 @@
 import { clsx } from "clsx";
+import { useNavigate } from "react-router-dom";
 import LogoFooter from "../../assets/img/logo_footer.svg";
 // import type React from "react";
 // import { footerItems } from "../../constants/footer-menu";
@@ -40,13 +41,14 @@ type FooterItem = {
 };
 
 const Footer = ({ onMenuClick }: FooterProps) => {
+	const navigate = useNavigate();
 	const footerItems: FooterItem[] = [
 		{
 			icon: "menu",
 			text: "Menu",
 			onclick: onMenuClick,
 		},
-		{ icon: "home", text: "Home", onclick: () => homeEvent(), selected: true },
+		{ icon: "home", text: "Home", onclick: () => navigate("/home") },
 		{ icon: "promo", text: "Promo", onclick: () => promoEvent(), promo: true },
 		{ icon: "wallet", text: "Wallet", onclick: () => walletEvent() },
 		{ icon: "profile", text: "Profile", onclick: () => profileEvent() },
@@ -62,6 +64,7 @@ const Footer = ({ onMenuClick }: FooterProps) => {
 						{ "data-selected": item.selected },
 					)}
 					onClick={item.onclick}
+					path={item.path}
 				>
 					<i
 						className={clsx(
